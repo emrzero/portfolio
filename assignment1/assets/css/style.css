@@ -1,13 +1,31 @@
 /***RESPONSIVE***/
-
+/** 
+Styling begins with Mobile first
+and continues with THREE breaking points:
+1) Width 640px
+2) Width 768px
+3) Width 980px
+***/
 /******Global****/
 
 * {
   line-height: 1.5;
   box-sizing: border-box;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  color: #777;
 }
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: #777;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", Times, Times New Roman, serif;
+  color: #4AAAA5;
+  font-size: 28px;
 }
 
 
@@ -27,72 +45,63 @@ header {
 
 }
 
-#top {
-  width: 60%;
-  margin: 0 auto;
-}
 
+/*** Header ***/
 #name{
-  max-width: 250px;
-  max-height: 100px;
+  width: 100%;
+  height: 100px;
   background-color: #4AAAA5;
-  display: inline-block;
 }
 
 #h-name {
   font-size: 32px;
   color: #fff;
-  padding: 20px;
   text-align: center;
+  padding-top: 25px;
 }
 
 nav {
-  float: right;
-  clear: right;
-  margin-top: 25px; 
+  margin: 10px auto;
 }
-
 .nav-li {
   display: inline-block;
-  margin: 0 5px;
+  width: 30%;
+  text-align: center;
 }
 
-/**** Main ****/
+.nav-li-separator {
+  display: none;
+}
+
+/**** Main Content area ***/
 
 main {
-  width: 60%;
+  width: 95%;
   margin: 10px auto;
-  margin-bottom: 40px;
 }
 
-#content {
-  width: 70%;
-  background-color: #fff;
-  display: inline-block;
-  padding: 10px;
+
+.box-container {
+  background: #fff;
   border-style: solid;
   border-width: 1px;
   border-color: #ddd;
-}
-
-
-/*** Side bar ***/
-aside {
-  width: 25%;
-  background-color: #fff;
-  float: right;
-  clear: right;
   padding: 10px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ddd;
+  margin: 20px auto;
 }
 
+#profilepic {
+  width: 100%;
+}
+
+hr {
+  margin: 10px 0 20px 0;
+}
+
+/**** Aside ****/
 .cm_logo {
   width: 50px;
   height: 50px;
-  float:left;
   margin: 5px;
 }
 
@@ -113,77 +122,6 @@ footer {
 
 #footer-text {
   color: #fff;
-  margin: 20px 0;
-}
-
-
-/**** About ****/
-
-#profilepic {
-  float: left;
-  margin: 0 10px 5px 0;
-}
-
-/**** Portfolio ***/
-
-.picbox {
-  display: inline-block;
-}
-
-/**** Media Queries ****/
-
-@media (max-width: 980px){
-  main {
-    width: 60%;
-  }
-
-  aside {
-    width: 25%;
-  }
-
-}
-
-@media (max-width: 768px){
-
-  #top {
-    width: 100%;
-  }
-
-  main {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  #content {
-    width: 80%;
-  }
-
-  aside {
-    width: 80%;
-    float: left;
-    clear: both;
-    margin: 0;
-  }
-
-
-}
-
-@media (max-width: 640px){
-  
-  #top {
-  width: 100%;
-  }
-
-  #name {
-    width: 100%;
-  }
-
-  main {
-    width: 100%;
-  }
-
-  #content {
-    margin: 10px auto
-  }
-
+  margin: 15px 0;
+  font-size: 1em;
 }
