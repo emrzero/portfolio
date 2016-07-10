@@ -2,9 +2,9 @@
 /** 
 Styling begins with Mobile first
 and continues with THREE breaking points:
-1) Width 640px
-2) Width 768px
-3) Width 980px
+1) max-width 640px
+2) max-width 768px
+3) max-width 980px
 ***/
 /******Global****/
 
@@ -28,6 +28,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 28px;
 }
 
+img {
+  width: 100%;
+}
 
 /******General****/
 body {
@@ -70,7 +73,7 @@ nav {
 }
 
 .nav-li-separator {
-  display: none;
+  display: inline-block;
 }
 
 /**** Main Content area ***/
@@ -90,13 +93,6 @@ main {
   margin: 20px auto;
 }
 
-#profilepic {
-  width: 100%;
-}
-
-hr {
-  margin: 10px 0 20px 0;
-}
 
 /**** Aside ****/
 .cm_logo {
@@ -124,4 +120,279 @@ footer {
   color: #fff;
   margin: 15px 0;
   font-size: 1em;
+}
+
+
+/*** About page ***/
+#profilepic {
+  width: 100%;
+}
+
+hr {
+  margin: 10px 0 20px 0;
+}
+
+
+/*** Portfolio page ***/
+
+#portfolio-container {
+  width: 100%;
+}
+
+.picbox {
+  width: 100%;
+}
+
+.t2 {
+  background-color: #4aaaa5;
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  position: relative;
+  left: 0;
+  bottom: 90px;
+  text-align: center;
+  font-size: 22px;
+}
+
+
+/*** Contact Page ***/
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+textarea {
+  height: 200px;
+}
+
+#contact-button {
+  background-color: #4AAAA5;
+  width: 120px;
+  color: #fff;
+  font-size: 18px;
+  border-width: 0;
+}
+
+
+
+/*** Begin Media Queries ****/
+
+@media screen and (min-width: 641px) {
+  #name {
+    max-width: 250px;
+    max-height: 100px;
+    background-color: #4AAAA5;
+    display: inline-block;
+  }
+
+  #h-name {
+    font-size: 32px;
+    color: #fff;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+  }
+
+  nav {
+    float: right;
+    clear: none;
+    margin: 40px 20px auto auto; 
+  }
+
+  .nav-li {
+    display: inline-block;
+    margin: 0 8px;
+    width: auto;
+  }
+
+
+  #profilepic {
+    width: 50%;
+    float: left;
+    clear: none;
+    margin: 0 10px 5px 0;
+  }
+
+  /*** Portfolio page min-width: 641px, max-width: 768px***/
+
+  #portfolio-container {
+    width: 100%%;
+    overflow: auto;
+    margin: 10px auto;
+  }
+
+  .picbox {
+    width: 45%;
+    float: left;
+    clear: none;
+    margin: 12px;
+  }
+
+  .t2 {
+    background-color: #4aaaa5;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    position: relative;
+    left: 0;
+    bottom: 90px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+
+
+/***********************************/
+@media screen and (min-width: 769px){
+  main {
+    width: 75%;
+  }
+
+  #content {
+    width: 55%;
+    margin-right: 30px;
+  }
+
+  aside {
+    width: 35%;
+  }
+
+  .box-container {
+    float: left;
+    clear: none;
+  }
+
+  #profilepic {
+    width: 100%;
+  }
+
+  /*** Portfolio page ***/
+
+  #portfolio-container {
+    width: 100%;
+  }
+
+  .picbox {
+    width: 100%;
+  }
+
+  .t2 {
+    background-color: #4aaaa5;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    position: relative;
+    left: 0;
+    bottom: 90px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+
+
+/***********************************/
+@media screen and (min-width: 981px){
+
+  /* Main */
+
+  main {
+    width: 960px;
+
+  }
+
+
+  #content {
+    width: 630px;
+    float: left;
+    clear: left;
+
+  }
+
+  /* Side Bar */
+
+  aside {
+    width: 300px;
+  }
+
+  .cm_logo {
+  }
+
+
+  /**************************/
+  /* Individual Page styles */
+
+  /*About Me */
+
+  #profilepic {
+    width: auto;
+    float: left;
+    margin: 0 15px 5px 0;
+  }
+
+
+
+  /* Portfolio */
+
+   #portfolio-container {
+    width: 100%%;
+    overflow: auto;
+    margin: 10px auto;
+  }
+
+  .picbox {
+    width: 45%;
+    float: left;
+    clear: none;
+    margin: 12px;
+  }
+
+  .t2 {
+    background-color: #4aaaa5;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    position: relative;
+    left: 0;
+    bottom: 90px;
+    text-align: center;
+    font-size: 22px;
+  }
+/*  #portfolio-container {
+
+  }
+
+  .picbox {
+    float: left;
+    clear: none;
+  }
+
+  .pic {
+    width: auto;
+  }
+
+  .portfolio_link {
+    width: 230px;
+    height: 300px;
+    overflow: auto;
+    float: left;
+    clear: none;
+  }
+
+  .t2 {
+    background-color: #4aaaa5;
+    width: 225px;
+    padding: 10px 0;
+    color: #fff;
+    position: relative;
+    left: 0;
+    bottom: 70px;
+    text-align: center;
+    font-size: 18px;
+  }*/
+
 }
