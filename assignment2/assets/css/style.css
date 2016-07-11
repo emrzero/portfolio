@@ -1,200 +1,233 @@
-/*Global*/
-* {
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
-  color: #777;
+/*
+ * Author: Carlos Alvarez
+ * URL: http://Alvarez.is
+ *
+ * Project Name: NYC Design
+ * Version: 1.0
+ * Date: 04-20-2014
+ * URL: 
+ */
+
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
 }
 
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+
 body {
-  background-image: url("../images/sayagata.png");
-  background-repeat: repeat;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Georgia", Times, Times New Roman, serif;
+	font-weight: 700;
+    color: #4a4a4a;
 }
 
 
-/*  Header and Navigation*/
-header {
-  background-color: #fff;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ddd;
-  padding: 0;
+.navbar-brand {
+	font-weight: 700;
 }
 
-#top {
-  max-width: 960px;
-  height: 100px;
-  background: #fff;
-  margin: 0 auto;
-
+.navbar-default .navbar-brand {
+	color: #fed136;
 }
 
-#name {
-  float: left;
-  width: 250px;
-  height: 100px;
-  background-color: #4AAAA5;
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
 }
 
-#h-name {
-  font-size: 38px;
-  color: #fff;
-  margin: 30px;
-
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fed136;
+	background-color: transparent;
+	border-bottom: 2px solid #fed136
 }
 
-nav {
-  float: right;
-  margin: 50px 50px 0 0;
+.navbar-default .navbar-nav > li > a {
+	color: #fed136;
 }
 
-.nav-li {
-  float: left;
-  margin: 0 10px
+#name:hover {
+  color: #fed136;
+}
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background: url(../img/back.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#headerwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#social {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f2f2f2;
+}
+
+#social i {
+	font-size: 40px;
+	color: #4a4a4a
+}
+
+#social i:hover {
+	color: #fed136
+}
+
+#footerwrap {
+	padding-top: 70px;
+	padding-bottom: 50px;
+	background-color: #2f2f2f;
+}
+
+#footerwrap p {
+	color: #f2f2f2;
+	margin-left: 10px;
+}
+
+#workwrap {	
+	background: url(../img/work.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#workwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#workwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#aboutwrap {	
+	background: url(../img/about.png) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 550px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
 
-/* Footer */
 
-footer {
-    float: left;
-    clear: both;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    background: #666;
-    padding: 20px 0 0 0;
-    border-top-style: solid;
-    border-width: 10px 0 0 0;
-    border-color: #4aaaa5;
+/* Gallery */
+.gallery {
+	margin-top: 30px;
 }
 
-#footer-text {
-  color: #fff;
-  margin: 20px 0;
+.gallery img:hover {
+	opacity: 0.4;
 }
-
-/* Side Bar */
-
-aside {
-  max-width: 230px;
-  height: 175px;  
-  background: #fff;
-  float: left;
-  clear: right;  
-  margin: 0 0 0 10px;
-  padding: 28px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ddd;
-}
-
-.cm_logo {
-  width: 50px;
-  height: 50px;
-  float:left;
-  margin: 5px;
-}
-
-/* Main */
-
-main {
-  width: 960px;
-  padding: 20px;
-  margin: 20px auto;
-
-}
-
-#content {
-  width: 640px;
-  float: left;
-  clear: none;
-  background: #fff;
-  margin: 0 30px 20px 0;
-  padding: 18px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ddd;
-
-}
-
-/**************************/
-/* Individual Page styles */
-
-/*About Me */
-
-#profilepic {
-  float: left;
-  margin: 0 15px 5px 0;
-}
-
-
-
-/* Portfolio */
-#portfolio-container {
-  margin: 40px 0 10px 38px;
-}
-
-.picbox {
-  float: left;
-  clear: none;
-  margin: 0 28.125px;
-}
-
-.portfolio_link {
-  width: 230px;
-  height: 300px;
-  overflow: auto;
-  float: left;
-  clear: none;
-  text-decoration: none !important;
-}
-
-.t2 {
-  background-color: #4aaaa5;
-  width: 225px;
-  padding: 10px 0;
-  color: #fff;
-  position: relative;
-  left: 0;
-  bottom: 70px;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none !important;
-}
-
-/* Contact */
-label {
-  font-size: 16px;
-}
-
-#contact-button {
-  background-color: #4AAAA5;
-  width: 120px;
-  color: #fff;
-  font-size: 18px;
-}
-
-/*Place Holder text styling accross browsers */
-
-::-webkit-input-placeholder {
-   font-size: 16px;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   font-size: 16px; 
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   font-size: 16px;
-}
-
-:-ms-input-placeholder {  
-   font-size: 16px;
-}
-
